@@ -1,0 +1,192 @@
+<html>
+<head>
+<title>Contact Us</title>
+<link rel="stylesheet" href="stylesheet.css" >
+
+<style>
+
+#abouttext{
+
+padding:10px;
+	margin-bottom:20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+
+
+}
+
+input[type=text] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+   border-radius: 4px;
+    transition: 0.5s;
+    outline: none;
+	border-radius:6px;
+}
+
+input[type=text]:focus {
+    border: 2px solid #f1cd3a;
+	background-color:#f9eaac;
+}
+input[type=Email] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+ border-radius:6px;
+    transition: 0.5s;
+    outline: none;
+}
+
+input[type=Email]:focus {
+       border: 2px solid #f1cd3a;
+	background-color:#f9eaac;
+}
+
+textarea{
+
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+ border-radius:10px;
+    transition: 0.5s;
+    outline: none;
+}
+
+textarea:focus{
+   border: 2px solid #f1cd3a;
+	background-color:#f9eaac;
+
+}
+
+
+button[type=submit] {
+    width: 10%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type=submit]:hover {
+    background-color: #45a049;}
+	
+#formsubmission{
+
+background-color:gray;
+border: solid 1px #c3c3c3;
+border-radius:10px;
+
+padding:10px;
+	margin-bottom:100px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+
+
+}
+</style>
+
+<script>
+function callthefunction()
+{
+var name=document.getElementById("Username").value;
+var email=document.getElementById("Useremail").value;
+/*Name validation*/
+
+if(name=="")  
+{
+alert ("Please enter valid Name");
+return false;
+}
+
+/*Email validation*/
+var regex=/^[A-Za-z0-9\._]+@[a-zA-Z_0-9]+\.[a-zA-Z]{2,4}/; 
+if(regex.test(email)==false)  
+{
+alert ("Please enter valid email");
+return false;
+}
+document.getElementById("formsubmission").innerHTML = "Thankyou for the feedback.We will soon reply you back as soon as possible";
+}
+
+</script>
+</head>
+<body >
+<!--top logo section-->
+<div style="width:100%; position:sticky;top:0px;z-index:100;">
+	<nav>
+	<label id="logoimage"><i><a href="index.html">Destination.com</a></i></label>
+		<ul>
+			<li><a href="INDEX.HTML">Home</a></li>
+			<li><a href="trekking.html">Trekking</a></li>
+			<li><a href="heritages.html">Heritages</a></li>
+			
+			<li><a href="popular.html">Popular</a></li>
+			<li><a href="contactus.html">About Us</a></li>
+		</ul>
+	</nav>
+</div>
+<h1>About us</h1>
+<div id="abouttext" style=" width:80%;margin-left:auto;margin-right:auto;margin-bottom:20px;text-align:justify;">
+<p>
+</br>
+<b>Destination.com</b> is a site created with an intension to help the interested poeple about different tourist destination located in nepal.</p> 
+<p>
+</br>
+The website was created by three developers (Suraj Barailee,Prabhat Kiran Dahal and Amit Maharjan) in 2017.Through long information gathering schedule, making internet as our source ,we have collected the best possible information and presented  in fornt of you
+</p>
+ 
+<p>
+ If you have any kind of questions or any information you want to share with us,kindly fill up the form below with you query and we will reply you asap.
+</br>Thankyou.
+</p> 
+</br>
+</div>
+<div id="formsubmission" style="font-size:20px; margin-left:auto;margin-right:auto;text-align:center; background-color:gray; width:70%">
+		<h2 style="text-align:center;color:white;">Contact Form</h2>
+
+<form method="post" onsubmit="return callthefunction()">
+			
+			<div style="text-align:center ;font-size:15px;margin:auto; background-color:#dcdcdc;" id="formsubmission">
+			
+			<b></br></br>
+				Full Name:
+				</br>
+				<input type="text" name="Name1" id="Username"></br>
+			
+				Email:</br>
+				<input type="Email" id="Useremail"></br>
+				Your Message:</br>
+				<textarea rows=10 cols=70></textarea></br>
+				<button type="submit"  style="";>Send</button>
+			</b>
+			</div>
+</form>
+</DIV>
+
+ 
+
+<? FOOTER SECTION --?>
+<footer class="footer">
+	<div>
+	</br><a href="INDEX.html">Home</a>  | 
+	<a href="contactus.html">Contact Us</a></br></br>
+	 &copy 2018 Destination.com</br>
+	Street no.21,Balaju,Kathmandu,Nepal.</br>
+	Phone no:+977-9813994844</br>
+	Email:email@destination.com</br>
+		<a href="https://facebook.com"><img src="images/medialogo/facebook.png">
+		<a href="https://instagram.com"><img src="images/medialogo/instagram.png">
+		<a href="https://pinterest.com"><img  src="images/medialogo/pinterest.png">
+		<a href="https://twitter.com"><img src="images/medialogo/twitter.png"></br>
+	</div>
+</footer>
+</body>
+</html>
